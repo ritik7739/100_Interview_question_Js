@@ -44,6 +44,12 @@ Promise.race([promise1,promise2,promise3]).then((res)=>
     console.log("Promise.allsettled",err)
 });
 
+Promise.any([promise1,promise2,promise3]).then((res)=>{
+    console.log("Promise.any",res);
+}).catch((err)=>{
+    console.log("Promise.any",err);
+});
+
 //pollyfills for Promise.all()
 
 function myPromise(newPromiseArray){
